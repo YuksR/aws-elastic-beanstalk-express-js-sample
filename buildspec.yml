@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing dependencies...
+      - npm install
+
+  pre_build:
+    commands:
+      - echo Running pre-build commands...
+      # Add any pre-build commands here if needed
+      - npm run 
+
+  build:
+    commands:
+      - echo Running build commands...
+      - npm run build  # Example: Building your application
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
+  base-directory: build  # Adjust this if your build directory is different
+
